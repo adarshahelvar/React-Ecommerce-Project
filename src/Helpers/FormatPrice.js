@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FormatPrice = ({price}) => {
+const FormatPrice = ({price}) => {                     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
   return Intl.NumberFormat('en-IN',{
     style: 'currency',
     currency: 'INR',
