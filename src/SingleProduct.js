@@ -8,6 +8,8 @@ import { Container } from "./styles/Container";
 import FormatPrice from "./Helpers/FormatPrice";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import { MdSecurity } from "react-icons/md";
+import Star from "./components/Star";
+import AddToCart from "./components/AddToCart";
 
 const API = "https://api.pujakaitem.com/api/products";
 
@@ -51,8 +53,7 @@ return (
         {/* product data*/}
         <div className='product-data'>
           <h2>{name}</h2>
-          <p>{stars}</p>
-          <p>{reviews} reviews</p>
+          <Star stars={stars} reviews= {reviews}/>
           <p className='product-data-price'>MRP:
             <del>                                           {/*del tag is used to stike the give line but dont delete */}
               <FormatPrice price= {price +250000} />
@@ -96,6 +97,8 @@ return (
                 Brand :<span> {company} </span>
               </p>
           </div>
+          <hr />
+          {stock > 0 && <AddToCart product={singleProduct} />}
         </div>
       </div>
     </Container>
