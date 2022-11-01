@@ -4,12 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { AppProvider } from "./Context/productcontext";
-
+import { FilterContextProvider } from  './Context/filter_context';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
 <AppProvider>
-<App />
+    <FilterContextProvider>
+        <App />
+    </FilterContextProvider>
 </AppProvider>
 );
 
