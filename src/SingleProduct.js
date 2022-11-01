@@ -38,7 +38,7 @@ useEffect(()=>{
   getSingleProduct(`${API}?id=${id}`);
 },[])
 
-if(isSingleLoading){
+if(isSingleLoading){ 
   return <div className="page_loading">Loading....!</div>
 }
 return (
