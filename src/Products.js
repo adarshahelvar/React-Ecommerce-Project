@@ -1,39 +1,34 @@
-import React from "react";
 import styled from "styled-components";
-import Product from "./components/Product";
 import FilterSection from "./components/FilterSection";
-import Sort from "./components/Sort";
 import ProductList from "./components/ProductList";
-import { useFilterContext } from "./Context/filter_context";
+import Sort from "./components/Sort";
+import { useFilterContext } from "./context/filter_context";
 
 const Products = () => {
-const { filter_products } = useFilterContext();
-console.log(filter_products);
+  return (
+    <Wrapper>
+      <div className="container grid grid-filter-column">
+        <div>
+          <FilterSection />
+        </div>
 
-  return <Wrapper>
-    <div className='container grid grid-filter-column'>
-      <div className='#'>
-        <FilterSection />
+        <section className="product-view--sort">
+          <div className="sort-filter">
+            <Sort />
+          </div>
+          <div className="main-product">
+            <ProductList />
+          </div>
+        </section>
       </div>
-
-      <section className='product-view--sort'>
-        <div className='sort-filter'>
-          <Sort />
-        </div>
-
-        <div className='main-product'>
-          <ProductList />
-        </div>
-      </section>
-    </div>
-  </Wrapper>;
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section`
   .grid-filter-column {
     grid-template-columns: 0.2fr 1fr;
   }
-
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     .grid-filter-column {
       grid-template-columns: 1fr;
@@ -42,4 +37,3 @@ const Wrapper = styled.section`
 `;
 
 export default Products;
-
