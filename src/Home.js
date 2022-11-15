@@ -1,5 +1,5 @@
 import React from 'react';
-import FeatureProducts from './components/FeatureProducts';
+import FeatureProducts from './components/FeatureProduct.js';
 import HeroSection from './components/HeroSection';
 import Services from './components/Services';
 import Trusted from './components/Trusted';

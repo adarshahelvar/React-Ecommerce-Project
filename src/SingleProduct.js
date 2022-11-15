@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { useProductContext } from "./context/productcontext";
+import { useProductContext } from "./context/productcontex.js";
 import PageNavigation from "./components/PageNavigation";
 import MyImage from "./components/MyImage";
 import { Container } from "./styles/Container";
