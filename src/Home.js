@@ -1,20 +1,21 @@
-import React from 'react';
-import FeatureProducts from './components/FeatureProduct.js';
-import HeroSection from './components/HeroSection';
-import Services from './components/Services';
-import Trusted from './components/Trusted';
+import FeatureProduct from "./components/FeatureProduct";
+import HeroSection from "./components/HeroSection";
+import Services from "./components/Services";
+import Trusted from "./components/Trusted";
 
 const Home = () => {
-    const data = {
-        name: "My Store"
-    };
+  const data = {
+    name: "thapa store",
+  };
+
   return (
     <>
-    <HeroSection  myData={data}/>
-    <FeatureProducts />
-    <Services />
-    <Trusted />
+      <HeroSection myData={data} />
+      <FeatureProduct />
+      <Services />
+      <Trusted />
     </>
-  )
-}
+  );
+};
+
 export default Home;
